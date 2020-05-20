@@ -1406,25 +1406,61 @@ h6 {
 }
 
 .view_all_news {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
   margin-top: 40px;
-  max-width: 180px;
-  font-size: 14px;
-  border-radius: 3px;
-  padding: 12px 4px;
+  border-radius: 2px;
+  padding: 12px 9px;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  letter-spacing: .05px;
   text-align: center;
   background: #ef3e42;
   color: #fff;
   margin-bottom: 40px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: .16s ease-out;
+  transition: .16s ease-out;
+}
+
+.view_all_news:before {
+  right: 10px;
+  width: 6px;
+  margin-top: -3px;
+  margin-left: -5px;
+  height: 6px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  content: "";
+  position: absolute;
+  top: 50%;
+}
+
+.view_all_news:after {
+  right: 11px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: .16s ease-out;
+  transition: .16s ease-out;
+  content: "";
+  position: absolute;
+  top: 50%;
 }
 
 .view_all_news:hover {
-  background: #d80b0bd1;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  padding-right: 35px;
+  -webkit-transition: .16s ease-out;
+  transition: .16s ease-out;
+}
+
+.view_all_news:hover:before {
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.view_all_news:hover:after {
+  width: 15px;
 }
 
 .article__bottom-meta p.author {
@@ -1606,7 +1642,7 @@ h6 {
     margin-top: 0px;
     -webkit-box-shadow: none;
     box-shadow: none;
-    padding: 20px 5px;
+    padding: 20px 10px;
   }
 
   .main_blog_title {
@@ -1829,6 +1865,15 @@ h6 {
   transform: rotate(-180deg);
 }
 
+@media (max-width: 991px) {
+  .blog_style1 {
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+    border: none;
+  }
+}
+
 @media (max-width: 767px) {
   .blog-pagination {
     padding-top: 0;
@@ -1877,6 +1922,10 @@ h6 {
 
   .blog_area .p_120 {
     padding-top: 0 !important;
+  }
+
+  .main_latest-posts {
+    padding: 0 10px;
   }
 }
 

@@ -1318,21 +1318,56 @@ border-radius: 0;
 // new styles
 
 .view_all_news {
-    display: block;
+    display: inline-block;
     margin: 0 auto;
     margin-top: 40px;
-    max-width: 180px;
-    font-size: 14px;
-    border-radius: 3px;
-    padding: 12px 4px;
+    // max-width: 180px;
+    // font-size: 14px;
+    border-radius: 2px;
+    padding: 12px 9px;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    letter-spacing: .05px;
     text-align: center;
     background: #ef3e42;
     color: #fff;
     margin-bottom: 40px;
-    transition: all 0.2s;
+    transition: .16s ease-out;
+    &:before {
+      right: 10px;
+      width: 6px;
+      margin-top: -3px;
+      margin-left: -5px;
+      height: 6px;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      content: "";
+      position: absolute;
+      top: 50%;
+    }
+    &:after {
+      right: 11px;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      -webkit-transition: .16s ease-out;
+      transition: .16s ease-out;
+      content: "";
+      position: absolute;
+      top: 50%;
+    }
     &:hover {
-        background: #d80b0bd1;
-        transition: all 0.2s;
+      padding-right: 35px;
+        // background: #d80b0bd1;
+        transition: .16s ease-out;
+        &:before {
+          border-bottom: 2px solid #fff;
+          border-right: 2px solid #fff;
+        }
+        &:after {
+          width: 15px;
+        }
     }
 }
 
@@ -1497,7 +1532,7 @@ border-radius: 0;
 	.blog_style1 .blog_text .blog_text_inner {
 		margin-top: 0px;
 		box-shadow: none;
-		padding: 20px 5px;
+    padding: 20px 10px;
 	}
 
 	.main_blog_title {
@@ -1693,6 +1728,16 @@ border-radius: 0;
   }
 }
 
+@media (max-width: 991px) {
+
+  .blog_style1 {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.35);
+    border-radius: 8px;
+    border: none;
+  }
+
+}
+
 
 @media (max-width: 767px) {
 
@@ -1745,6 +1790,10 @@ border-radius: 0;
     .blog_area .p_120 {
       padding-top: 0 !important;
     }
+
+    .main_latest-posts {
+      padding: 0 10px;
+  }
     
   }
 
