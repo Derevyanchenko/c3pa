@@ -9,6 +9,7 @@ $(document).ready(function() {
       slidesToScroll: 1,
       speed: 300,
       fade: true,
+      autoplay: 3000,
       cssEase: 'linear',
       appendDots: $(".banner__dots"),
       prevArrow: $(".banner-prev"),
